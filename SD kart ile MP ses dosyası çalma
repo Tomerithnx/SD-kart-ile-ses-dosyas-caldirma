@@ -1,0 +1,20 @@
+Void setup()
+{
+  SdPlay.setSDCSPin(4); //SD Kart CS Pini
+  if (!SdPlay.init(SD_MODE_FULLRATE| SSDA_MODE_MONO| SSDA_MODE_AUTOWORKER))
+{
+  While(1);
+}
+if(!SdPlay.setFile("music.wav"))// Müzik Dosya Adı
+{ 
+  while(1);
+}
+}
+void Koop()
+{
+  SdPlay.play(); //Seçilen Dosyayı Çal
+while(!SdPlay.isStopped()) //MÜZİK BİTTİĞİNDE TEKRAR  ÇAL
+{
+ ;
+}
+}
